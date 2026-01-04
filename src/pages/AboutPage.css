@@ -1,0 +1,118 @@
+/* AboutPage.css */
+
+.about-page-wrapper {
+  background-color: #050505;
+  color: white;
+  min-height: 100vh;
+  padding: 20px 20px 60px 20px;
+}
+
+.about-container { max-width: 1200px; margin: 0 auto; }
+
+/* Hero Spacing */
+.about-hero { text-align: center; margin-bottom: 25px; }
+.hero-title { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 8px; }
+.hero-title span { background: linear-gradient(to right, #0070f3, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-subtitle { color: #888; font-size: 1rem; }
+
+/* JOURNEY CARD HOVER EFFECT */
+.story-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 45px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.story-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.4s ease;
+}
+
+.story-card:hover .stat-item {
+  border-color: #0070f3;
+  transform: scale(1.05);
+}
+
+.global-stat span { color: #00d4ff !important; text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
+
+/* VISION & MISSION HOVER EFFECTS */
+.vision-mission-grid { display: flex; gap: 20px; margin-bottom: 40px; align-items: stretch; }
+
+.glass-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 28px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vision-hover:hover {
+  background: rgba(0, 112, 243, 0.05);
+  border-color: #0070f3;
+  transform: translateY(-10px) rotate(-1deg);
+}
+
+.mission-hover:hover {
+  background: rgba(0, 212, 255, 0.05);
+  border-color: #00d4ff;
+  transform: translateY(-10px) rotate(1deg);
+}
+
+.icon-box {
+  background: #0070f3;
+  width: 55px; height: 55px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+.glass-card:hover .icon-box { transform: scale(1.1) rotate(10deg); box-shadow: 0 0 20px rgba(0, 112, 243, 0.5); }
+
+/* WHY CHOOSE US - RECTANGLE GLOW HOVER */
+.section-label { font-size: 1.8rem; margin-bottom: 30px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+.value-card {
+  text-align: center;
+  padding: 45px 30px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.value-card:hover {
+  transform: translateY(-15px);
+  background: rgba(0, 212, 255, 0.03);
+  border-color: #00d4ff;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.v-icon { color: #fff; margin-bottom: 20px; transition: 0.4s; }
+.value-card:hover .v-icon { color: #00d4ff; transform: scale(1.2); filter: drop-shadow(0 0 10px #00d4ff); }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .vision-mission-grid, .values-grid, .story-card { flex-direction: column; display: grid; grid-template-columns: 1fr; }
+  .hero-title { font-size: 2.5rem; }
+}
